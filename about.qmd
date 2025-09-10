@@ -1,0 +1,16 @@
+---
+title: "Kishor Das"
+toc: false
+---
+
+# About Me
+
+I'm a master's graduate in **Health Data Science** passionate about  
+turning healthcare data into actionable insights.  
+
+I specialize in:
+
+**R and Python programming**, **Predictive modeling and machine learning**,  **Clinical research analytics**  and **Genomics and population health studies**.
+
+
+Outside work, I love **data storytelling**, **open science**, and exploring **new tools** for health informatics.

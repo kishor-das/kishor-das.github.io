@@ -1,0 +1,24 @@
+---
+title: "EHR Text Mining"
+---
+
+```{r}
+library(tidyverse)
+library(tidytext)
+
+# Simulate EHR notes
+ehr_notes <- tibble(
+  id = 1:5,
+  text = c("Patient has diabetes and hypertension.",
+           "No history of smoking. Normal vitals.",
+           "Severe asthma attack. Prescribed steroids.",
+           "High cholesterol, diabetes management ongoing.",
+           "Mild depression, follow-up in 2 weeks.")
+)
+
+tokens <- ehr_notes %>%
+  unnest_tokens(word, text) %>%
+  count(word, sort = TRUE)
+
+tokens
+```

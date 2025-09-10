@@ -1,0 +1,18 @@
+---
+title: "Curriculum Vitae"
+toc: false
+---
+
+# Curriculum Vitae
+
+Download my [PDF CV](files/mycv.pdf).
+
+## Education
+
+- **MSc in Health Data Science**, University XYZ, 2025
+- **BSc in Biostatistics**, University ABC, 2023
+
+## Skills
+- Programming: R, Python, SQL
+- Tools: GitHub, Quarto, R Markdown, Shiny
+- Techniques: Predictive Modeling, Survival Analysis, NLP, Data Visualization

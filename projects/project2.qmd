@@ -1,0 +1,19 @@
+---
+title: "Genomic Data Clustering"
+---
+
+```{r}
+library(tidyverse)
+library(cluster)
+
+# Simulate genomic expression data
+set.seed(42)
+genomic_data <- matrix(rnorm(200*50), nrow=200, ncol=50)
+
+# K-means clustering
+kmeans_result <- kmeans(genomic_data, centers=3)
+
+# Plot cluster counts
+table(kmeans_result$cluster)
+
+```

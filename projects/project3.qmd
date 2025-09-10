@@ -1,0 +1,20 @@
+---
+title: "Clinical Trial Survival Analysis"
+---
+
+```{r}
+library(survival)
+library(survminer)
+
+# Simulate survival data
+set.seed(123)
+n <- 200
+time <- rexp(n, rate = 0.1)
+status <- rbinom(n, 1, 0.7)
+group <- sample(c("Treatment", "Control"), n, replace = TRUE)
+
+surv_object <- Surv(time, status)
+fit <- survfit(surv_object ~ group)
+
+ggsurvplot(fit, data=data.frame(time,status,group),
+           pval=TRUE, risk.table=TRUE)

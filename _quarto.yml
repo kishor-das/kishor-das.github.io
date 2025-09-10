@@ -1,0 +1,44 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Kishor Das"
+  open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
+  page-footer: "Made with ❤️ and Quarto"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: cv.qmd
+        text: CV
+      - text: Projects
+        href: projects/project1.qmd
+    tools:
+    - icon: github
+      text: Github
+      href: https://github.com
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com
+  sidebar:
+    - title: "Projects"
+      collapse-level: 1
+      style: "docked"
+      background: light
+      contents: 
+        - section: "Causal Inference Projects"
+          contents:
+            - href: projects/project1.qmd
+              text: Project 1
+            - href: projects/project2.qmd
+              text: Project 2
+
+      
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    toc: true
+

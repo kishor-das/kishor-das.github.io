@@ -1,0 +1,34 @@
+---
+title: "Predicting Hospital Readmissions"
+format: 
+  html:
+    toc: true
+    toc-location: right
+---
+
+
+
+## Loading Packages
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+## Simulating a dataset
+
+```{r}
+set.seed(123)
+n <- 500
+hospital_data <- tibble(
+  age = rnorm(n, 65, 10),
+  comorbidities = sample(0:5, n, replace = TRUE),
+  readmitted = rbinom(n, 1, 0.3)
+)
+
+# Logistic regression
+model <- glm(readmitted ~ age + comorbidities, data = hospital_data, family = "binomial")
+
+summary(model)
+```
+
+## Conclusion
